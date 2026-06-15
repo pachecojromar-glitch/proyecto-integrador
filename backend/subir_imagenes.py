@@ -1,18 +1,18 @@
 import requests
 import os
 
-# Obtener token automáticamente
-login = requests.post("http://127.0.0.1:8000/usuarios/login", json={
+
+login = requests.post("https://proyecto-integrador-cy02.onrender.com/usuarios/login", json={
     "email": "elian@pinly.com",
     "password": "admin12345"
 })
 token = login.json()["access_token"]
 headers = {"Authorization": f"Bearer {token}"}
 
-# Carpeta raíz donde están tus categorías
+
 RUTA_BASE = r"C:\Users\pache\Downloads\proyecto"
 
-# Mapeo de carpeta -> categoría en la app
+
 CATEGORIAS = {
     "deportes": "Deportes",
     "ropa": "Ropa",
@@ -39,7 +39,7 @@ for carpeta, categoria in CATEGORIAS.items():
 
         with open(ruta_imagen, "rb") as f:
             response = requests.post(
-                "http://127.0.0.1:8000/pines/",
+                "https://proyecto-integrador-cy02.onrender.com/pines/",
                 headers=headers,
                 files={"imagen": (imagen, f)},
                 data={

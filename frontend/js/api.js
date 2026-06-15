@@ -3,6 +3,7 @@
     "use strict";
 
     const BASE_URL = "https://proyecto-integrador-cy02.onrender.com";
+    
 
     const KEY_TOKEN = "visor_token";
     const KEY_USUARIO = "visor_usuario";
