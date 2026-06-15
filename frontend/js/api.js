@@ -1,10 +1,8 @@
-// wrapper centralizado para las llamadas al backend de Visor
-// expongo un objeto API global con metodos get, post, del y helpers de sesion
 
 (function (window) {
     "use strict";
 
-    const BASE_URL = "http://localhost:8000";
+    const BASE_URL = "https://proyecto-integrador-cy02.onrender.com";
 
     const KEY_TOKEN = "visor_token";
     const KEY_USUARIO = "visor_usuario";
